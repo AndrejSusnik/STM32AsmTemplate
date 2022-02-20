@@ -1,0 +1,185 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000008000000 0x0000000000100000 xr
+ram              0x0000000020000000 0x0000000000020000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./src/main.o
+START GROUP
+LOAD /usr/local/bin/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/local/bin/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+END GROUP
+START GROUP
+LOAD /usr/local/bin/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/local/bin/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+LOAD /usr/local/bin/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a
+END GROUP
+
+.text           0x0000000008000000      0x614
+ *(.vectors)
+ *(.text*)
+ .text          0x0000000008000000      0x60c ./src/main.o
+                0x0000000008000528                SysTick_Handler
+                0x0000000008000534                HASH_RNG_IRQHandler
+                0x0000000008000534                EXTI2_IRQHandler
+                0x0000000008000534                TIM8_CC_IRQHandler
+                0x0000000008000534                DebugMon_Handler
+                0x0000000008000534                TIM1_CC_IRQHandler
+                0x0000000008000534                DMA2_Stream5_IRQHandler
+                0x0000000008000534                HardFault_Handler
+                0x0000000008000534                DMA1_Stream5_IRQHandler
+                0x0000000008000534                PVD_IRQHandler
+                0x0000000008000534                SDIO_IRQHandler
+                0x0000000008000534                TAMP_STAMP_IRQHandler
+                0x0000000008000534                PendSV_Handler
+                0x0000000008000534                NMI_Handler
+                0x0000000008000534                CAN2_RX1_IRQHandler
+                0x0000000008000534                EXTI3_IRQHandler
+                0x0000000008000534                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008000534                TIM1_UP_TIM10_IRQHandler
+                0x0000000008000534                TIM8_UP_TIM13_IRQHandler
+                0x0000000008000534                I2C3_ER_IRQHandler
+                0x0000000008000534                EXTI0_IRQHandler
+                0x0000000008000534                I2C2_EV_IRQHandler
+                0x0000000008000534                DMA1_Stream2_IRQHandler
+                0x0000000008000534                CAN1_RX0_IRQHandler
+                0x0000000008000534                FPU_IRQHandler
+                0x0000000008000534                OTG_HS_WKUP_IRQHandler
+                0x0000000008000534                UsageFault_Handler
+                0x0000000008000534                CAN2_SCE_IRQHandler
+                0x0000000008000534                DMA2_Stream2_IRQHandler
+                0x0000000008000534                SPI1_IRQHandler
+                0x0000000008000534                TIM6_DAC_IRQHandler
+                0x0000000008000534                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008000534                DCMI_IRQHandler
+                0x0000000008000534                CAN2_RX0_IRQHandler
+                0x0000000008000534                DMA2_Stream3_IRQHandler
+                0x0000000008000534                USART6_IRQHandler
+                0x0000000008000534                USART3_IRQHandler
+                0x0000000008000534                CAN1_RX1_IRQHandler
+                0x0000000008000534                UART5_IRQHandler
+                0x0000000008000534                DMA2_Stream0_IRQHandler
+                0x0000000008000534                TIM4_IRQHandler
+                0x0000000008000534                I2C1_EV_IRQHandler
+                0x0000000008000534                DMA1_Stream6_IRQHandler
+                0x0000000008000534                DMA1_Stream1_IRQHandler
+                0x0000000008000534                UART4_IRQHandler
+                0x0000000008000534                TIM3_IRQHandler
+                0x0000000008000534                RCC_IRQHandler
+                0x0000000008000534                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008000534                EXTI15_10_IRQHandler
+                0x0000000008000534                ADC_IRQHandler
+                0x0000000008000534                DMA1_Stream7_IRQHandler
+                0x0000000008000534                TIM7_IRQHandler
+                0x0000000008000534                CAN2_TX_IRQHandler
+                0x0000000008000534                TIM5_IRQHandler
+                0x0000000008000534                DMA2_Stream7_IRQHandler
+                0x0000000008000534                I2C3_EV_IRQHandler
+                0x0000000008000534                EXTI9_5_IRQHandler
+                0x0000000008000534                RTC_WKUP_IRQHandler
+                0x0000000008000534                ETH_WKUP_IRQHandler
+                0x0000000008000534                SPI2_IRQHandler
+                0x0000000008000534                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008000534                MemManage_Handler
+                0x0000000008000534                DMA1_Stream0_IRQHandler
+                0x0000000008000534                CAN1_TX_IRQHandler
+                0x0000000008000534                SVC_Handler
+                0x0000000008000534                EXTI4_IRQHandler
+                0x0000000008000534                FSMC_IRQHandler
+                0x0000000008000534                ETH_IRQHandler
+                0x0000000008000534                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008000534                WWDG_IRQHandler
+                0x0000000008000534                TIM2_IRQHandler
+                0x0000000008000534                OTG_FS_WKUP_IRQHandler
+                0x0000000008000534                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008000534                OTG_HS_IRQHandler
+                0x0000000008000534                EXTI1_IRQHandler
+                0x0000000008000534                USART2_IRQHandler
+                0x0000000008000534                I2C2_ER_IRQHandler
+                0x0000000008000534                DMA2_Stream1_IRQHandler
+                0x0000000008000534                CAN1_SCE_IRQHandler
+                0x0000000008000534                FLASH_IRQHandler
+                0x0000000008000534                DMA2_Stream4_IRQHandler
+                0x0000000008000534                BusFault_Handler
+                0x0000000008000534                USART1_IRQHandler
+                0x0000000008000534                OTG_FS_IRQHandler
+                0x0000000008000534                SPI3_IRQHandler
+                0x0000000008000534                DMA1_Stream4_IRQHandler
+                0x0000000008000534                I2C1_ER_IRQHandler
+                0x0000000008000534                DMA2_Stream6_IRQHandler
+                0x0000000008000534                RTC_Alarm_IRQHandler
+                0x0000000008000534                DMA1_Stream3_IRQHandler
+ *(.rodata*)
+ .rodata        0x000000000800060c        0x8 ./src/main.o
+                0x0000000008000614                . = ALIGN (0x4)
+                0x0000000008000614                __etext = .
+                0x0000000008000614                _sidata = .
+
+.glue_7         0x0000000008000000        0x0
+ .glue_7        0x0000000008000000        0x0 linker stubs
+
+.glue_7t        0x0000000008000000        0x0
+ .glue_7t       0x0000000008000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000000008000000        0x0
+ .vfp11_veneer  0x0000000008000000        0x0 linker stubs
+
+.v4_bx          0x0000000008000000        0x0
+ .v4_bx         0x0000000008000000        0x0 linker stubs
+
+.iplt           0x0000000008000000        0x0
+ .iplt          0x0000000008000000        0x0 ./src/main.o
+
+.rel.dyn        0x0000000008000000        0x0
+ .rel.iplt      0x0000000008000000        0x0 ./src/main.o
+
+.data           0x0000000020000000        0x0 load address 0x0000000008000614
+                0x0000000020000000                __data_start__ = .
+ *(.data*)
+ .data          0x0000000020000000        0x0 ./src/main.o
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __data_end__ = .
+
+.igot.plt       0x0000000020000000        0x0
+ .igot.plt      0x0000000020000000        0x0 ./src/main.o
+
+.bss            0x0000000020000000       0x94 load address 0x0000000008000614
+                0x0000000020000000                __bss_start__ = .
+                0x0000000020000000                . = ALIGN (0x4)
+ *(.bss*)
+ .bss           0x0000000020000000       0x91 ./src/main.o
+ *(COMMON)
+                0x0000000020000094                . = ALIGN (0x4)
+ *fill*         0x0000000020000091        0x3 
+                0x0000000020000094                __bss_end__ = .
+                0x0000000020020000                __StackTop = (ORIGIN (ram) + LENGTH (ram))
+                0x0000000000000614                __text_size = SIZEOF (.text)
+                0x0000000000000000                __data_size = SIZEOF (.data)
+                0x0000000000000094                __bss_size = SIZEOF (.bss)
+OUTPUT(./out/main.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x0000000000000000       0x21
+ .ARM.attributes
+                0x0000000000000000       0x21 ./src/main.o
+
+.debug_line     0x0000000000000000      0x1f2
+ .debug_line    0x0000000000000000      0x1f2 ./src/main.o
+
+.debug_info     0x0000000000000000       0x26
+ .debug_info    0x0000000000000000       0x26 ./src/main.o
+
+.debug_abbrev   0x0000000000000000       0x14
+ .debug_abbrev  0x0000000000000000       0x14 ./src/main.o
+
+.debug_aranges  0x0000000000000000       0x20
+ .debug_aranges
+                0x0000000000000000       0x20 ./src/main.o
+
+.debug_str      0x0000000000000000       0x56
+ .debug_str     0x0000000000000000       0x56 ./src/main.o
