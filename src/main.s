@@ -497,11 +497,11 @@ vector_table:
 _start:
   bl led_on
 
-// ==========    Define functions here    ==========
-
 Default_Handler:
 Infinite_Loop:
   b  Infinite_Loop
+
+// ==========    Define functions here    ==========
 
 led_on:
   push { r5, r6, lr }
