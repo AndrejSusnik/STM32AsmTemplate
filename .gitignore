@@ -6,5 +6,5 @@ Release/
 .cortex-debug.peripherals.state.json
 .cortex-debug.registers.state.json
 *.log
-out/*
 .vscode/settings.json
+out/*
