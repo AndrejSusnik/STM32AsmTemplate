@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Cortex Debug",
+      "name": "Debug bord",
       "cwd": "${workspaceRoot}",
       "executable": "./out/main.elf",
       "request": "launch",
@@ -14,6 +14,22 @@
       "device": "STM32f407G",
       "svdFile": "./STM32F407.svd",
       "showDevDebugOutput": true,
-    }
+      "preLaunchTask": "Build"
+    },
+    {
+      "name": "Debug simulator",
+      "cwd": "${workspaceRoot}",
+      "executable": "./out/main.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "qemu",
+      "serverpath": "qemu-system-gnuarmeclipse",
+      "cpu": "cortex-m4",
+      "machine": "STM32F4-Discovery",
+      "device": "STM32f407G",
+      "svdFile": "./STM32F407.svd",
+      "showDevDebugOutput": true,
+      "preLaunchTask": "Build"
+    },
   ]
 }
