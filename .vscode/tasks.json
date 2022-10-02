@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "make",
             "windows": {
-                "command": "make"
+                "command": " C:\\ST\\STM32CubeIDE_1.10.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.make.win32_2.0.100.202202231230\\tools\\bin\\make.exe"
             },
             "group": {
                 "kind": "build",

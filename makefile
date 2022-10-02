@@ -1,5 +1,10 @@
+ifdef OS
+TARGET = .\out\main
+SRCS = .\src\main.s
+else
 TARGET = ./out/main
 SRCS = ./src/main.s
+endif
 
 OBJS =  $(addsuffix .o, $(basename $(SRCS)))
 INCLUDES = -I.
@@ -42,7 +47,7 @@ SIZE = $(CROSS_COMPILE)size
 DBG = $(CROSS_COMPILE)gdb
 
 ifdef OS
-	RM_CMD = del /F /Q
+	RM_CMD = del /F
 else
 	RM_CMD = rm -f
 endif
