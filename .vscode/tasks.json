@@ -13,8 +13,8 @@
                 "isDefault": true
             },
             "presentation": {
-                "reveal": "always",
-                "panel": "new"
+                "reveal": "never",
+                "panel": "shared"
             },
             "problemMatcher": []
         }
