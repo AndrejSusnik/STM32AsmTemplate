@@ -9,7 +9,7 @@ endif
 OBJS =  $(addsuffix .o, $(basename $(SRCS)))
 INCLUDES = -I.
 
-LINKER_SCRIPT = stm32.ld
+LINKER_SCRIPT = STM32F407.ld
 CFLAGS += -mcpu=cortex-m4 -mthumb # processor setup
 CFLAGS += -O0 # optimization is off
 CFLAGS += -g3 # generate debug info
